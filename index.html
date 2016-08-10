@@ -3,21 +3,16 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="resources/font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/indexStyles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
-	<script   src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.js"></script>
-	<script   src="resources/scripts/jquery-3.1.0.js"></script>
-	<script   src="resources/scripts/jquery-ui.js"></script>
+	
+	
 
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+<body data-spy="scroll" data-target="#navbar" data-offset="50"> 
 
 	<div class="container-fluid">
 		 <div class="row fixed-header">
@@ -25,11 +20,11 @@
 				<header id="banner">
 					<div class="row">
 						<div class="col-md-2">
-							 <a href="#"> <span id="link"></span> </a> 
-							<img src="http://res.cloudinary.com/todai/image/upload/v1464873431/146487352498428_v9sob9.gif" id="bannerImg">
+							 <a href="#top"> 
+							<img src="http://res.cloudinary.com/todai/image/upload/v1464873431/146487352498428_v9sob9.gif" id="bannerImg"> </a>
 						</div>
 						<div class="col-md-10">
-							<nav id="navbar" class="collapse navbar-collapse">
+							<nav id="navbar" class="navbar collapse navbar-collapse">
 								<div class="navbar-header">
 
 									<button type="button" data-toggle="collapse" data-target="#navBar-target" class="navbar-toggle"> 
@@ -40,7 +35,7 @@
 								</div>
 								<div class="collapse navbar-collapse" id="navBar-target">
 									<ul class="nav navbar-nav navbar-right">
-										<li>
+										<li class="active">
 											<a href="#top" > About </a>
 										</li>
 										<li>
@@ -59,9 +54,9 @@
 				<main>
 
 					<header id="top">
-						<div class="container-fluid bottom-buffer top-buffer">
+						<div class="bottom-buffer top-buffer">
 							<div class="row">
-								<div class="intro-text col-md-8">
+								<div class="col-md-8">
 									<p class="text-right lead">
 										My name is <strong> J</strong>oakim <strong>K</strong>akaei, I'm a Software Engineer with knowledge of most main-stream languages as well as some more obscure. I have experience working with c++, c#, java amongst many other; working knowledge of project management and methodologies.
 									</p>
@@ -80,7 +75,7 @@
 					<section id="portfolio"> 
 
 
-						<div class="container-fluid bottom-buffer">
+						<div class="bottom-buffer">
 							<div class="row">
 
 								<div class="col-md-12">
@@ -185,11 +180,12 @@
 
 								</div>
 
-							</div>
-
-
+							</div> 
 						</div>  
-						<div class="container-fluid  closer-top bottom-buffer">
+						<div class="row">
+							<p class="text-center lead"><span class="underline-black"><strong> Hover over cards to show more </strong></span></p>
+						</div>
+						<div class="closer-top bottom-buffer">
 							<div class="row text-center">
 								<span class="prev">Prev</span>
 								<span class="next">Next</span>
@@ -202,7 +198,8 @@
 								<div class="col-md-12">
 									<h2> Skills </h2>
 									<hr class="star-dark" />
-									<div id="slider"> 
+									<p class="text-center skills-text"> Programming Languages - Design Skills - Theoretical knowledge </p>
+									<div id="slider" class="grabbable"> 
 										<ul>
 											<div class="element">
 												<li class="list-element"><canvas id="programming"> </canvas></li>
@@ -215,43 +212,93 @@
 											</div>
 										</ul> 
 									</div>
+									<p class="text-center lead"> <span class="underline-black"><strong> Drag to show more </strong></span></p>
 								</div>
 							</div>
 						</div>   
 					</section>
-					<section id="contact">
-						<div class="container-fluid">
+					<section id="contact"> 
 							<div class="row"> 
 								<div class="col-md-12">
 									<h2> Contact </h2>
 									<hr class="star-dark"/>
-									<form class="go-bottom">
+									<div class="col-md-6">
+									<form id="contactForm" role="form" class="go-bottom text-left">
 										<div>
 											<input id="name" name="name" type="text" required>
 											<label for="name">Name</label>
 										</div>
 										<div>
-											<input id="mail" name="mail" type="text" required>
-											<label for="mail"> E-mail </label> 
+											<input id="email" name="email" type="text" required>
+											<label for="email"> E-mail </label> 
 										</div>
 										<div>
 											<input id="phone" name="phone" type="text" required>
 											<label for="phone"> Phone number </label> 
 										</div>
 										<div>
-											<input id="message" name="message" type="text" required>
+											<textarea name="message" cols="40" rows="5" required></textarea>
 											<label for="message"> Message </label>
 										</div>
-									</form>
+										<div class="top-buffer">
+											<button type="submit" class="form-button">
+											 <span class="lead"> Send </span><i class="fa fa-envelope fa-2x"></i> 
+											</button>
+										</div>
+									</form> 
+									</div>
+									<div class="col-md-4 col-md-offset-1 text-left form-right top-buffer">
+									<p class="lead text-left"> Drop me a line if you wish to get in contact, regardless 
+															   of if you wish to get more information about me or just want to
+															   grab a fika in London. </p>
+									<p class="lead text-left"> I'll get back to you ASAP! </p>
+									<p class="lead text-left"> No spam please, <br>
+									                           Ingen spam är du snäll, <br>
+															   スパムを送らないでください!
+
+									</div>
 								</div>
-							</div>
-						</div>
+							</div> 
 					</section>
 				</main>
-			</div>
-			<script src="resources/scripts/carousel.js"> </script>
-			<script src="resources/scripts/charts.js"> </script>
-			<script src="resources/scripts/smooth-scroll.js"> </script>
+				<div class="row">  
+				<div id="bottom-banner"> 
+				<div class="col-md-3 col-md-offset-2 top-buffer">
+						<p class="banner-text-l text-center"> <span><strong> ABOUT THIS PAGE </strong> </span> </p> 
+						<p class="text-center banner-text top-buffer"> <span> <strong> Made with <i class="fa fa-coffee"></i>, <i class="fa fa-music"></i> and an extensive amount of <i class="fa fa-search"></i> </strong> </span> </p>
+						<p class="text-center banner-text"> <span> <strong> by <a href="https://www.facebook.com/joakim.kakaei"> Joakim Bajoul Kakaei </a> </strong> </span> </p>  
+				</div> 
+				<div class="col-md-7 top-buffer">
+				<p class="text-center banner-text-l"><strong> KIMPUT </strong></p>
+				<p class="text-center banner-text-l"><strong> AROUND THE WEB </strong> </p>
+				<ul class="list-inline text-center"> 
+				<li><span class="social-media">
+					<a href="https://www.linkedin.com/in/joakim-bajoul-kakaei-b6996a6a?trk=nav_responsive_tab_profile">
+						<i class="fa fa-linkedin fa-2x"> </i> 
+					</a>
+				</span></li>
+				<li><span class="social-media">
+					<a href="https://github.com/Todai88">
+						<i class="fa fa-github fa-2x"> </i> 
+					</a>
+				</span></li>
+				<li><span class="social-media">
+					<a href="https://twitter.com/KimputCodes">
+						<i class="fa fa-twitter fa-2x"> </i>
+					</a>
+				</span></li> 
+				</div> 
+				</div>
+				</div>
+			</div> 
+			<script   src="resources/scripts/jquery-3.1.0.js"></script>
+			<script   src="resources/scripts/jquery-ui.js"></script> 
+			<script   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+			<script   src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.js"></script>
+			<script   src="resources/scripts/carousel.js"> </script>
+			<script   src="resources/scripts/charts.js"> </script>
+			<script   src="resources/scripts/smooth-scroll.js"> </script>
+			<script   src="resources/scripts/snippets.js"> </script>
 		</header>
 	</div>
 </div>

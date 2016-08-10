@@ -7,21 +7,21 @@ var designBarChartData = {
     borderColor: ['rgba(255,39,0,1)', 'rgba(0,20,255, 1)', 'rgba(0,0,0, 1)', 'rgba(232, 90,0, 1)', 'rgba(0,70,204, 1)'],
     borderWidth: 1,
     yAxisID: "y-axis-1",
-    data: [40, 30, 50, 40, 30]
+    data: [30, 35, 25, 30, 40]
   }]
 };
 
 
 
 var langBarChartData = {
-  labels: ["Java", "C#", "Javascript", "SQL", "VB.NET", "Erlang", "C/C++"],
+  labels: ["Java", "C#", "Coffe drinking", "SQL", "VB.NET", "Japanese"],
   datasets: [{
     label: 'Programming',
     backgroundColor: ["rgba(57,130,255,0.8)", "rgba(168,0,255,0.8)",  "rgba(231,131,0, 0.8)", "rgba(0,0,0,1)", "rgba(0,140,220,0.8)", "rgba(230,0,64,0.8)", "rgba(57,66,255,0.8)"],
     borderColor: ['rgba(230,0,64,0.9)', 'rgba(212,98,197, 1)', 'rgba(232, 90,0, 1)', 'rgba(255,111,0, 1)', 'rgba(212,98,197, 1)', 'rgba(0,0,0,1)', 'rgba(140,194,255)'],
     borderWidth: 1,
     yAxisID: "y-axis-1",
-    data: [40, 30, 50, 40, 60, 20, 30]
+    data: [40, 30, 95, 40, 60, 65]
   }]
 };
 
@@ -87,7 +87,27 @@ window.onload = function() {
         id: "y-axis-1",
         ticks: {
           max: 100,
-          min: 0
+          min: 0,
+          userCallback: function (value, index, values) {
+            if (value % 10 == 0){
+
+              if (value == 20){
+                return "Slow & Steady";
+              }
+              if (value == 40) {
+                return "White-belt";
+              }
+              if (value == 60) {
+                return "Pretty Good";
+              }
+              if (value == 80) {
+                return "Smokin'";
+              }
+              if (value == 100) {
+                return "Sensei";
+              }
+            }
+          }
         }
       }, {
         type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
@@ -96,8 +116,28 @@ window.onload = function() {
         id: "y-axis-2",
         ticks: {
           max: 100,
-          min: 0
-        },
+          min: 0,
+            userCallback: function (value, index, values) {
+            if (value % 10 == 0){
+
+              if (value == 20){
+                return "Slow & Steady";
+              }
+              if (value == 40) {
+                return "White-belt";
+              }
+              if (value == 60) {
+                return "Pretty Good";
+              }
+              if (value == 80) {
+                return "Smokin'";
+              }
+              if (value == 100) {
+                return "Sensei";
+              }
+            }
+          }
+        }  
       }], 
     }
   }
@@ -123,8 +163,28 @@ window.onload = function() {
         id: "y-axis-1",
         ticks: {
           max: 100,
-          min: 0
-        }
+          min: 0,
+            userCallback: function (value, index, values) {
+            if (value % 10 == 0){
+
+              if (value == 20){
+                return "Slow & Steady";
+              }
+              if (value == 40) {
+                return "White belt";
+              }
+              if (value == 60) {
+                return "Samurai";
+              }
+              if (value == 80) {
+                return "Ninja";
+              }
+              if (value == 100) {
+                return "Sensei";
+              }
+            }
+          }
+        } 
       }, {
         type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
         display: true,
@@ -132,8 +192,28 @@ window.onload = function() {
         id: "y-axis-2",
         ticks: {
           max: 100,
-          min: 0
-        }
+          min: 0,
+          userCallback: function (value, index, values) {
+            if (value % 10 == 0){
+
+              if (value == 20){
+                return "Slow & Steady";
+              }
+              if (value == 40) {
+                return "White-belt";
+              }
+              if (value == 60) {
+                return "Pretty Good";
+              }
+              if (value == 80) {
+                return "Smokin'";
+              }
+              if (value == 100) {
+                return "Sensei";
+              }
+            }
+          }
+        } 
       }],
     }
   }
@@ -159,7 +239,27 @@ window.onload = function() {
         id: "y-axis-1",
         ticks: {
           max: 100,
-          min: 0
+          min: 0,
+            userCallback: function (value, index, values) {
+            if (value % 10 == 0){
+
+              if (value == 20){
+                return "Slow & Steady";
+              }
+              if (value == 40) {
+                return "White-belt";
+              }
+              if (value == 60) {
+                return "Pretty Good";
+              }
+              if (value == 80) {
+                return "Smokin'";
+              }
+              if (value == 100) {
+                return "Sensei";
+              }
+            }
+          }
         }
       }, {
         type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
@@ -168,7 +268,27 @@ window.onload = function() {
         id: "y-axis-2",
         ticks: {
           max: 100,
-          min: 0
+          min: 0,
+            userCallback: function (value, index, values) {
+            if (value % 10 == 0){
+
+              if (value == 20){
+                return "Slow & Steady";
+              }
+              if (value == 40) {
+                return "White-belt";
+              }
+              if (value == 60) {
+                return "Pretty Good";
+              }
+              if (value == 80) {
+                return "Smokin'";
+              }
+              if (value == 100) {
+                return "Sensei";
+              }
+            }
+          }
         }
       }],
     }

@@ -20,9 +20,9 @@
 
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
-  color: #333;
-  background-color: transparent;
+  color: #333; 
 }
+
 
 .navbar-nav>li>a {
   color: #000000 !important;
@@ -63,18 +63,23 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-
-.nav>li>a:focus,
-.nav>li>a:hover {
-  text-decoration: none;
-  color: #722872;
-  background-color: #FFFFFF;
-}
-
-.nav>li a:hover {
+ 
+.navbar-nav>.active>a {
   color: #722872;
   background: #FFFFFF;
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+} 
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #FFFFFF;
+  color: #722872;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.nav > li > a:focus {
+  background-color: transparent; 
+  box-shadow: none;
 }
 
 article,
@@ -139,7 +144,7 @@ main header {
   padding-bottom: 4%;
 }
 .closer-top {
-  margin-top: -5%;
+  margin-top: -4%;
 }
 
 main section {
@@ -298,7 +303,7 @@ h2 {
   box-sizing: border-box;
   padding: 10px;
   color: #ffffff; 
-  background-color: rgba(0,0,0,.8);
+  background-color: rgb(0,0,0);
 } 
 
 .back a {
@@ -394,8 +399,7 @@ h2 {
 .prev { left: 10em; } 
 
 form {
-  padding-left: 3vw;
-  width: 45% 
+  padding-left: 3vw; 
 }
 form > div {
   position: relative;
@@ -439,7 +443,7 @@ form label {
 }
 form textarea {
   display: block;
-  resize: vertical;  
+  resize: none;  
 }
 
 form.go-bottom input, form.go-bottom textarea { 
@@ -463,9 +467,14 @@ form.go-bottom input:focus + label, form.go-bottom textarea:focus + label {
   margin-top: -1vw;
 }
 
+.skills-text {
+  font-size: 16pt;
+  font-weight: bold; 
+}
+ 
 #slider { 
   width: 100%;
-    overflow: hidden;
+    overflow: hidden;  
 }
 
 ul { 
@@ -489,3 +498,92 @@ canvas {
   height: auto;
   float: left;
 }
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.form-right {
+  padding-top: 2vh;
+  background: #aaa;
+  color: white; 
+  box-shadow: 10px 10px 5px #888888; 
+  -moz-box-shadow: 10px 10px 5px #888888; 
+  -webkit-box-shadow: 10px 10px 5px #888888;
+
+}
+
+#bottom-banner {
+  height: 25vh;
+  background-color: #aaa;
+  color: white;
+} 
+
+.banner-text {
+  font-size: .9vw;
+}
+
+.banner-text-l{
+  font-size: 1.2vw;
+}
+ 
+ .social-media{ 
+    padding: 5px 10px;
+    display: inline-block;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px; 
+    -moz-box-shadow: 0px 0px 2px #888;
+    -webkit-box-shadow: 0px 0px 2px #888;
+    box-shadow: 0px 0px 2px #888;
+    border: 5px solid white;
+    background: #aaa;
+    -webkit-transition: background-color 1s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 1s, color 1s; 
+  }
+
+.social-media:hover {
+    background-color: black;
+}
+
+.social-media a {
+  color: black; 
+}
+
+.fa-linkedin {
+  color: #007bb6; 
+  transition: color 1s;
+}
+
+.fa-linkedin:hover {
+  color: white;
+}
+
+.fa-github { 
+ color: black;
+ transition: color 1s;
+}
+
+.fa-github:hover {
+  color: white;
+}
+
+.fa-twitter {
+  color: #00aced;
+  transition: color 1s;
+}
+
+.fa-twitter:hover {
+  color: white;
+}
+
+ 
